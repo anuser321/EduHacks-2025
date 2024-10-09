@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #000000, #0f0c29, #302b63);
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.star {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: twinkle 2s infinite;
+}
+
+.laptop {
+  position: absolute;
+  opacity: 0.7;
+  animation: float 20s infinite;
+}
+
+.laptop svg {
+  width: 100%;
+  height: 100%;
+}
+
+.laptop-1 {
+  width: 100px;
+  height: 100px;
+  top: 15%;
+  left: 25%;
+}
+
+.laptop-2 {
+  width: 60px;
+  height: 60px;
+  top: 70%;
+  right: 20%;
+}
+
+.laptop-3 {
+  width: 80px;
+  height: 80px;
+  top: 40%;
+  left: 75%;
+}
+
+.laptop-4 {
+  width: 120px;
+  height: 120px;
+  top: 60%;
+  left: 10%;
+}
+
+.laptop-5 {
+  width: 90px;
+  height: 90px;
+  top: 25%;
+  right: 15%;
+}
+
+.comet {
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+  animation: comet 10s linear infinite;
+}
+
+@keyframes comet {
+  0% { transform: translateX(-100%) translateY(0); }
+  100% { transform: translateX(200%) translateY(200px); }
+}
+
+.floating-elements svg {
+  position: absolute;
+  opacity: 0.3;
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.7));
+}
+
+.book {
+  top: 20%;
+  left: 10%;
+  animation: float 8s ease-in-out infinite;
+}
+
+.rocket {
+  top: 60%;
+  right: 15%;
+  animation: float 10s ease-in-out infinite;
+}
+
+.atom {
+  top: 40%;
+  left: 60%;
+  animation: float 12s ease-in-out infinite, rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
